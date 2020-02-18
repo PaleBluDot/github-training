@@ -150,16 +150,21 @@ Download the desktop app at https://desktop.github.com/
 
 ![Github Interface](/images/github-interface.png)
 
-1. **Green:** Files that have changes
-2. **Blue:** Changes within a file
-3. **Red:** Input for the commit Message
-4. **Orange:** Fetch/Pull/Push to remote
+1. **Green:** Files that have changes.
+2. **Blue:** Changes within a file.
+3. **Red:** Input for the commit Message.
+4. **Orange:** Fetch/Pull/Push to remote.
 
 ### Committing Changes
 
-![Github Interface](/images/github-commit.gif)
+![Github Commit](/images/github-commit.gif)
+
+1. Check files to commit in green section.
+2. Check blue section for changes.
+3. Add commit message in red message if everything looks correct.
 
 ### Pushing Changes
 
+![Github Push](/images/github-push.gif)
 
-![Github Interface](/images/github-push.gif)
+1. Push to remote in orange section.
