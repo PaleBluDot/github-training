@@ -1,6 +1,6 @@
 # Working with Git and Github
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ea9995bd-5940-498f-944f-ba2a70a3153b/deploy-status)](https://app.netlify.com/sites/psd-github/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ea9995bd-5940-498f-944f-ba2a70a3153b/deploy-status)](https://psd-github.netlify.com)
 
 **Git** is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.
 
@@ -21,7 +21,7 @@
       a. [Push](#push)
 2. [Github GUI](#github-gui)
 
-## 1. Command Line
+## Command Line
 
 ### Setting Up Repository
 
@@ -140,8 +140,26 @@ git push
 
 ## Github Desktop
 
+![Github for Mac](/images/github-desktop-screenshot-mac.png)
+
 The same commands used in the terminal are the same for the Github UI.
 
-![Giuthub for Mac](/images/github-desktop-screenshot-mac.png)
-
 Download the desktop app at https://desktop.github.com/
+
+### Interface
+
+![Github Interface](/images/github-interface.png)
+
+1. **Green:** Files that have changes
+2. **Blue:** Changes within a file
+3. **Red:** Input for the commit Message
+4. **Orange:** Fetch/Pull/Push to remote
+
+### Committing Changes
+
+![Github Interface](/images/github-commit.gif)
+
+### Pushing Changes
+
+
+![Github Interface](/images/github-push.gif)
