@@ -1,7 +1,5 @@
 # Working with Git and Github
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ea9995bd-5940-498f-944f-ba2a70a3153b/deploy-status)](https://psd-github.netlify.com)
-
 **Git** is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files.
 
 **GitHub** is a Git repository hosting service, but it adds many of its own features. While Git is a command line tool, GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features, such as a wikis and basic task management tools for every project.
