@@ -1,0 +1,29 @@
+{
+	"name": "github-training",
+	"version": "1.0.0",
+	"description": "A repo for testing and training GH uses.",
+	"main": "index.js",
+	"scripts": {
+		"commit": "echo \"Commit: It worked\" ",
+		"push": "echo \"Push: It worked\" ",
+		"prepare": "husky install"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PaleBluDot/github-training.git"
+	},
+	"keywords": [
+		"github",
+		"git",
+		"training"
+	],
+	"author": "Pavel Sanchez",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/PaleBluDot/github-training/issues"
+	},
+	"homepage": "https://github.com/PaleBluDot/github-training#readme",
+	"devDependencies": {
+		"husky": "^7.0.1"
+	}
+}
