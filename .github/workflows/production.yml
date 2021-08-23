@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: 15
+        node: [15]
         os: [ubuntu-latest, macOS-latest, windows-latest]
 
     steps:
@@ -67,18 +67,6 @@ jobs:
         run: npm run build
 
       - name: 🚢 Release
-        uses: cycjimmy/semantic-release-action@v2
-        with:
-          dry_run: true
-          semantic_version: 17
-          extra_plugins: |
-            @semantic-release/changelog@3.0.0
-            @semantic-release/git@9.0.0
-          branches: |
-            [
-              'master',
-              'main',
-            ]
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: npm run release
