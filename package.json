@@ -22,10 +22,11 @@
 		"training"
 	],
 	"scripts": {
-		"commit": "echo Commit: It worked",
-		"push": "echo Push: It worked",
-		"release": "npx semantic-release -d",
-		"semantic-release": "semantic-release"
+		"commit": "echo COMMIT: Your message was committed.",
+		"push": "echo PUSH: Your code was pushed to remote repo.",
+		"lint": "echo LINT: Has passed all test.",
+		"build": "echo BUILD: All files built without errors.",
+		"release": "npx semantic-release"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^5.0.1",

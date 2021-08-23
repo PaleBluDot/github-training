@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         node: [15]
-        os: [ubuntu-latest, macOS-latest, windows-latest]
+        os: [ubuntu-latest]
 
     steps:
       - name: 🛑 Cancel Previous Runs
@@ -38,12 +38,7 @@ jobs:
           HUSKY_SKIP_INSTALL: true
 
       - name: 🧪 Run lint
-        run: npm run prettier
-
-      - name: 🏗 Build
-        run: npm run build
-        env:
-          CI: true
+        run: npm run lint
 
   release:
     if: ${{ github.repository == 'palebludot/github-training' && contains('refs/heads/master,refs/heads/main', github.ref) && github.event_name == 'push' }}
