@@ -10,13 +10,13 @@
       b. [Clone](#clone)
       c. [Settings](#settings)
    2. [Saving Changes](#saving-changes)
-      c. [Staging](#staging)
-      d. [Commit](#commit)
+      a. [Staging](#staging)
+      b. [Commit](#commit)
    3. [Sync to Remote](#sync-to-remote)
       a. [Remote](#remote)
-      a. [Fetch](#fetch)
-      a. [Pull](#pull)
-      a. [Push](#push)
+      b. [Fetch](#fetch)
+      c. [Pull](#pull)
+      d. [Push](#push)
 2. [Github GUI](#github-gui)
 
 ## Command Line
