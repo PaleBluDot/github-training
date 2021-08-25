@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.2.1](https://github.com/PaleBluDot/github-training/compare/v1.2.0...v1.2.1) (2021-08-25)
+
+
+### Bug Fixes
+
+* update registry ([8233e52](https://github.com/PaleBluDot/github-training/commit/8233e523ceef813e500d4900d243078f9ef220e1))
+
 # [1.2.0](https://github.com/PaleBluDot/github-training/compare/v1.1.0...v1.2.0) (2021-08-25)
 
 
