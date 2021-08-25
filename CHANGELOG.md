@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+# [1.3.0](https://github.com/PaleBluDot/github-training/compare/v1.2.1...v1.3.0) (2021-08-25)
+
+
+### Features
+
+* new workflow ([5a6b2e2](https://github.com/PaleBluDot/github-training/commit/5a6b2e292b1b30dbb0e1ffed8ed37bcac963de67))
+
 ## [1.2.1](https://github.com/PaleBluDot/github-training/compare/v1.2.0...v1.2.1) (2021-08-25)
 
 
