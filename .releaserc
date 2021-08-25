@@ -1,0 +1,23 @@
+{
+	"dryRun": false,
+	"branches": ["main"],
+	"plugins": [
+		"@semantic-release/commit-analyzer",
+		"@semantic-release/release-notes-generator",
+		[
+			"@semantic-release/changelog",
+			{
+				"changelogFile": "CHANGELOG.md",
+				"changelogTitle": "# Changelog\n\nAll notable changes to this project will be documented in this file. See\n[Conventional Commits](https://conventionalcommits.org) for commit guidelines.\n\n"
+			}
+		],
+		[
+			"@semantic-release/git",
+			{
+				"message": "chore(release): ${nextRelease.version} [action]"
+			}
+		],
+		"@semantic-release/npm",
+		"@semantic-release/github"
+	]
+}

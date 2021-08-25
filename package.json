@@ -1,6 +1,6 @@
 {
-	"name": "github-training",
-	"version": "1.0.0",
+	"name": "@palebludot/github-training",
+	"version": "0.0.0-development",
 	"description": "Testing and training Github.",
 	"main": "index.js",
 	"author": "Pavel Sanchez",
@@ -14,6 +14,7 @@
 		"url": "https://github.com/PaleBluDot/github-training/issues"
 	},
 	"publishConfig": {
+		"access": "restricted",
 		"registry": "https://registry.npmjs.org"
 	},
 	"keywords": [
@@ -22,22 +23,26 @@
 		"training"
 	],
 	"scripts": {
-		"commit": "echo COMMIT: Your message was committed.",
+		"commit": "git cz",
+		"acp": "git add . && npm run commit && git push",
 		"push": "echo PUSH: Your code was pushed to remote repo.",
 		"lint": "echo LINT: Has passed all test.",
 		"build": "echo BUILD: All files built without errors.",
-		"release": "npx semantic-release",
-		"semantic-release": "semantic-release"
+		"release": "npx semantic-release --branches main"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^5.0.1",
-		"@semantic-release/commit-analyzer": "8.0.1",
 		"@semantic-release/git": "^9.0.0",
-		"@semantic-release/github": "7.0.7",
-		"@semantic-release/release-notes-generator": "9.0.1",
+		"@semantic-release/github": "^7.2.3",
+		"cz-conventional-changelog": "^3.3.0",
 		"husky": "7.0.1",
 		"lint-staged": "10.2.11",
 		"prettier": "2.0.5",
 		"semantic-release": "^17.4.6"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }
