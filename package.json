@@ -15,7 +15,7 @@
 	},
 	"publishConfig": {
 		"access": "restricted",
-		"registry": "https://registry.npmjs.org"
+		"registry": "https://npm.pkg.github.com"
 	},
 	"keywords": [
 		"github",
