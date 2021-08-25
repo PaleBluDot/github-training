@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+# [1.4.0](https://github.com/PaleBluDot/github-training/compare/v1.3.0...v1.4.0) (2021-08-25)
+
+
+### Features
+
+* name update ([937e1b1](https://github.com/PaleBluDot/github-training/commit/937e1b182c78e4705a801398dc28039937bdc3b7))
+
 # [1.3.0](https://github.com/PaleBluDot/github-training/compare/v1.2.1...v1.3.0) (2021-08-25)
 
 
