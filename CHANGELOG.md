@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.4.1](https://github.com/PaleBluDot/github-training/compare/v1.4.0...v1.4.1) (2021-08-25)
+
+
+### Bug Fixes
+
+* made heading bolder ([c08a03c](https://github.com/PaleBluDot/github-training/commit/c08a03c8c7bfd5e3d7aa856580f25cdd7ff30fb3))
+
 # [1.4.0](https://github.com/PaleBluDot/github-training/compare/v1.3.0...v1.4.0) (2021-08-25)
 
 
