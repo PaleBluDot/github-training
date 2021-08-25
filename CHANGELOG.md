@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.4.3](https://github.com/PaleBluDot/github-training/compare/v1.4.2...v1.4.3) (2021-08-25)
+
+
+### Bug Fixes
+
+* typo ([1be46ba](https://github.com/PaleBluDot/github-training/commit/1be46bab1eabb6b69f3ad376010594872e6fc6c6))
+
 ## [1.4.2](https://github.com/PaleBluDot/github-training/compare/v1.4.1...v1.4.2) (2021-08-25)
 
 
