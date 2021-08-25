@@ -1,5 +1,5 @@
 {
-	"name": "github-training",
+	"name": "@palebludot/github-training",
 	"version": "0.0.0-development",
 	"description": "Testing and training Github.",
 	"main": "index.js",
@@ -28,6 +28,7 @@
 		"push": "echo PUSH: Your code was pushed to remote repo.",
 		"lint": "echo LINT: Has passed all test.",
 		"build": "echo BUILD: All files built without errors.",
+		"test": "echo TEST: All test passed!",
 		"release": "npx semantic-release --branches main"
 	},
 	"devDependencies": {
