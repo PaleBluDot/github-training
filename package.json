@@ -29,7 +29,7 @@
 		"lint": "echo LINT: Has passed all test.",
 		"build": "echo BUILD: All files built without errors.",
 		"test": "echo TEST: All test passed!",
-		"release": "npx semantic-release --branches main"
+		"semantic-release": "npx semantic-release --branches main"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^5.0.1",
