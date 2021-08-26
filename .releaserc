@@ -14,7 +14,7 @@
 		[
 			"@semantic-release/git",
 			{
-				"message": "chore(release): ${nextRelease.version} [action]"
+				"message": "chore(release): v${nextRelease.version} [ci]"
 			}
 		],
 		"@semantic-release/npm",
