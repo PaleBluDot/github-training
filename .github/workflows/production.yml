@@ -5,7 +5,14 @@ name: Production
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - master
+      - alpha
+      - beta
+      - next
+      - next-major
+      - "!all-contributors/**"
 
 jobs:
   quality:
@@ -15,17 +22,23 @@ jobs:
       matrix:
         node-version: [16]
         os: [ubuntu-latest]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+
+      - name: ⏬ Install NPM packages
       - run: npm ci
+
+      - name: 👷‍♂️ Run Build Command
       - run: npm run build --if-present
+
+      - name: 🚨 Run A Test and Linting
       - run: npm test
 
   publish:
@@ -34,11 +47,15 @@ jobs:
     needs: [quality]
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+
+      - name: ⏬ Install NPM packages
       - run: npm ci
+
       - run: npm run semantic-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

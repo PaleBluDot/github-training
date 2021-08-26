@@ -5,24 +5,66 @@ name: Development
 
 on:
   pull_request:
+    branches:
+      - "+([0-9])?(.{+([0-9]),x}).x"
+      - main
+      - master
+      - alpha
+      - beta
+      - next
+      - next-major
+    types: [opened, synchronize, reopened]
 
 jobs:
-  Quality:
+  quality:
+    if: ${{ !contains(github.head_ref, 'all-contributors') }}
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         node-version: [16]
         os: [ubuntu-latest]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+
+      - name: ⏬ Install NPM packages
       - run: npm ci
+
+      - name: 👷‍♂️ Run Build Command
       - run: npm run build --if-present
+
+      - name: 🚨 Run A Test and Linting
       - run: npm test
+
+  release:
+    steps:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: [quality]
+      - name: 🚀 Test The Release
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          dry_run: true
+          semantic_version: 17
+          extra_plugins: |
+            @semantic-release/changelog@3.0.0
+            @semantic-release/git@9.0.0
+          branches: |
+            [
+              'main',
+              'master',
+              'next',
+              'next-major',
+              {name: 'beta', prerelease: true},
+              {name: 'alpha', prerelease: true}
+            ]
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

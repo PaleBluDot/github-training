@@ -2,19 +2,39 @@ module.exports = {
 	types: [
 		{
 			value: "✨ feat:",
-			name: "feat: ✨    A new feature",
+			name: "✨ feat:\tA new feature",
 		},
 		{
 			value: "🐞 fix:",
-			name: "fix:  🐞    A bug fix",
+			name: "🐞 fix:\t A bug fix",
+		},
+		{
+			value: "🧪 test:",
+			name: "🧪 test:\tTesting improved with new or fixed tests",
+		},
+		{
+			value: "🔩 chore:",
+			name: "🔩 chore:\t Doesn't modify src or test files",
 		},
 		{
 			value: "📚 docs:",
-			name: "docs: 📚    Documentation only changes",
+			name: "📚 docs:\t Documentation only changes",
 		},
 		{
-			value: "🚨 test:",
-			name: "test: 🚨    Changes to tests",
+			value: "🚀 build:",
+			name: "🚀 build:\t Build system config or external dependencies",
+		},
+		{
+			value: "🚨 ci:",
+			name: "🚨 ci:\t CI config files and scripts",
+		},
+		{
+			value: "♻ refactor:",
+			name: "♻ refactor:\t Neither fixes a bug nor adds a feature",
+		},
+		{
+			value: "⏪ revert:",
+			name: "⏪ revert:\t Reverts a previous commit",
 		},
 	],
 
@@ -40,7 +60,8 @@ module.exports = {
 		confirmCommit: "Are you sure you want to proceed with the commit above?",
 	},
 
-	allowCustomScopes: false,
+	allowCustomScopes: true,
 	allowBreakingChanges: ["feat", "fix"],
-	subjectLimit: 100,
+	subjectLimit: 60,
+	skipQuestions: ["footer"],
 };
