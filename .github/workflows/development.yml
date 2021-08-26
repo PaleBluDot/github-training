@@ -43,11 +43,6 @@ jobs:
       - name: 🚨 Run A Test and Linting
       - run: npm test
 
-  release:
-    steps:
-    runs-on: ubuntu-latest
-    if: ${{ github.ref == 'refs/heads/main' }}
-    needs: [quality]
       - name: 🚀 Test The Release
         uses: cycjimmy/semantic-release-action@v2
         with:
