@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file. See
 
 
 
+# [1.5.0](https://github.com/PaleBluDot/github-training/compare/v1.4.3...v1.5.0) (2021-08-26)
+
+
+### Features
+
+* add custom config file ([f19cf81](https://github.com/PaleBluDot/github-training/commit/f19cf811bf86974a0594b3f0f4ba76c143fa9ecd))
+* adding commitlint config ([ede8566](https://github.com/PaleBluDot/github-training/commit/ede8566fe1ac07985a4311395ec2e8bfa338d8c1))
+
 ## [1.4.3](https://github.com/PaleBluDot/github-training/compare/v1.4.2...v1.4.3) (2021-08-25)
 
 
