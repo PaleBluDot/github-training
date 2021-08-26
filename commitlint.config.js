@@ -21,6 +21,17 @@ module.exports = {
 				type: {
 					description: "Type of change that you're committing",
 					enum: {
+						ci: {
+							description:
+								"Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
+							title: "Continuous Integrations",
+							emoji: "⚙️",
+						},
+						docs: {
+							description: "Documentation only changes",
+							title: "Documentation",
+							emoji: "📚",
+						},
 						feat: {
 							description: "A new feature",
 							title: "Features",
@@ -31,21 +42,10 @@ module.exports = {
 							title: "Bug Fixes",
 							emoji: "🐛",
 						},
-						docs: {
-							description: "Documentation only changes",
-							title: "Documentation",
-							emoji: "📚",
-						},
 						test: {
 							description: "Adding missing tests or correcting existing tests",
 							title: "Tests",
 							emoji: "🚨",
-						},
-						ci: {
-							description:
-								"Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)",
-							title: "Continuous Integrations",
-							emoji: "⚙️",
 						},
 					},
 				},
