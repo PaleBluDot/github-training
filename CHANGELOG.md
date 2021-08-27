@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.5.2](https://github.com/PaleBluDot/github-training/compare/v1.5.1...v1.5.2) (2021-08-27)
+
+
+### Bug Fixes
+
+* **automation:** fix release error ([9503059](https://github.com/PaleBluDot/github-training/commit/9503059f10e463a2ff4dd3170fe74913d1dc142f))
+* **automation:** release actions ([f6b8e78](https://github.com/PaleBluDot/github-training/commit/f6b8e7878b1c860311269f50abbd62a61043e133))
+* **core:** added packages ([308edba](https://github.com/PaleBluDot/github-training/commit/308edba9d629c7e9c0373b3a106783a91ede3772))
+* **core:** gitmoji ([1273269](https://github.com/PaleBluDot/github-training/commit/1273269001d326f77da1135da95542e225612d39))
+* **core:** update gitmoji name ([bbefe19](https://github.com/PaleBluDot/github-training/commit/bbefe190dcd24cc1171526705b57e252e3a284f9))
+
 ## [1.5.1](https://github.com/PaleBluDot/github-training/compare/v1.5.0...v1.5.1) (2021-08-27)
 
 
