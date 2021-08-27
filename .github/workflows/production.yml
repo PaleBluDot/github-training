@@ -27,6 +27,9 @@ jobs:
       - run: npm tes
 
   Release:
+    if: ${{ github.repository == 'palebludot/emailhint' &&
+      contains('refs/heads/master,refs/heads/main,refs/heads/beta,refs/heads/next,refs/heads/alpha',
+      github.ref) && github.event_name == 'push' }}
     runs-on: ${{ matrix.os }}
     needs: [Test]
     strategy:
