@@ -5,7 +5,14 @@ name: Production
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - master
+      - alpha
+      - beta
+      - next
+      - next-major
+      - "!all-contributors/**"
 
 jobs:
   quality:
