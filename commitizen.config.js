@@ -1,39 +1,39 @@
 module.exports = {
 	types: [
 		{
-			value: "✨ feat",
+			value: "feat",
 			name: "✨ feat:\tA new feature",
 		},
 		{
-			value: "🐞 fix",
+			value: "fix",
 			name: "🐞 fix:\t A bug fix",
 		},
 		{
-			value: "🧪 test",
+			value: "test",
 			name: "🧪 test:\tTesting improved with new or fixed tests",
 		},
 		{
-			value: "🔩 chore",
+			value: "chore",
 			name: "🔩 chore:\t Doesn't modify src or test files",
 		},
 		{
-			value: "📚 docs",
+			value: " docs",
 			name: "📚 docs:\t Documentation only changes",
 		},
 		{
-			value: "🚀 build",
+			value: "build",
 			name: "🚀 build:\t Build system config or external dependencies",
 		},
 		{
-			value: "🚨 ci",
+			value: "ci",
 			name: "🚨 ci:\t CI config files and scripts",
 		},
 		{
-			value: "♻ refactor",
+			value: "refactor",
 			name: "♻ refactor:\t Neither fixes a bug nor adds a feature",
 		},
 		{
-			value: "⏪ revert:",
+			value: "revert",
 			name: "⏪ revert:\t Reverts a previous commit",
 		},
 	],
@@ -62,7 +62,7 @@ module.exports = {
 	},
 
 	allowCustomScopes: true,
-	allowBreakingChanges: ["✨ feat", "🐞 fix"],
+	allowBreakingChanges: ["feat", "fix"],
 	subjectLimit: 60,
 	skipQuestions: ["footer"],
 };
