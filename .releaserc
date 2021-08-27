@@ -5,13 +5,13 @@
 		[
 			"@semantic-release/commit-analyzer",
 			{
-				"config": "conventional-changelog-gitmoji-config"
+				"config": "commitlint-config-gitmoji"
 			}
 		],
 		[
 			"@semantic-release/release-notes-generator",
 			{
-				"config": "conventional-changelog-gitmoji-config"
+				"config": "commitlint-config-gitmoji"
 			}
 		],
 		[
