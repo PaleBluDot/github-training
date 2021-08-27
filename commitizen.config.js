@@ -40,6 +40,7 @@ module.exports = {
 
 	scopes: [
 		{ name: "admin" },
+		{ name: "automation" },
 		{ name: "cli" },
 		{ name: "core" },
 		{ name: "site" },

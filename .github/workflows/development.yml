@@ -24,26 +24,19 @@ jobs:
       matrix:
         node-version: [16]
         os: [ubuntu-latest]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v2
-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-
-      - name: ⏬ Install NPM packages
       - run: npm ci
-
-      - name: 👷‍♂️ Run Build Command
       - run: npm run build --if-present
-
-      - name: 🚨 Run A Test and Linting
       - run: npm test
-
-      - name: 🚀 Test The Release
+      - name: 🚢 Release
         uses: cycjimmy/semantic-release-action@v2
         with:
           dry_run: true
