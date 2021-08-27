@@ -1,5 +1,4 @@
 {
-	"dryRun": false,
 	"branches": ["main"],
 	"plugins": [
 		"@semantic-release/commit-analyzer",

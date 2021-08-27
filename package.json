@@ -40,6 +40,7 @@
 		"@semantic-release/release-notes-generator": "^9.0.3",
 		"commitlint": "^11.0.0",
 		"commitlint-config-gitmoji": "^2.2.5",
+		"cz-conventional-changelog": "^3.2.0",
 		"cz-customizable": "^6.3.0",
 		"husky": "7.0.1",
 		"lint-staged": "10.2.11",
@@ -52,6 +53,12 @@
 		},
 		"cz-customizable": {
 			"config": "commitizen.config.js"
+		}
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint && npm test",
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
 		}
 	}
 }
