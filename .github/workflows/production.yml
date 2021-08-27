@@ -7,13 +7,14 @@ on:
 
 jobs:
   Test:
-    if: ${{ !contains(github.head_ref, 'all-contributors') }}
+    name: Test
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         node-version: [16]
         os: [ubuntu-latest]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
       - uses: actions/checkout@v2
@@ -24,35 +25,21 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm tes
+      - run: npm test
 
-  Release:
-    if: ${{ github.repository == 'PaleBluDot/github-training' &&
-      contains('refs/heads/main,refs/heads/master,refs/heads/beta,refs/heads/next,refs/heads/alpha',
-      github.ref) && github.event_name == 'push' }}
-    runs-on: ${{ matrix.os }}
+  Publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs: [Test]
-    strategy:
-      matrix:
-        node-version: [16]
-        os: [ubuntu-latest]
     steps:
-      - name: 🚢 Test Release
-        uses: cycjimmy/semantic-release-action@v2
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          semantic_version: 17
-          extra_plugins: |
-            @semantic-release/changelog@5.0.1
-            @semantic-release/git@9.0.0
-          branches: |
-            [
-              'main',
-              'master',
-              'next',
-              'next-major',
-              {name: 'beta', prerelease: true},
-              {name: 'alpha', prerelease: true}
-            ]
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
