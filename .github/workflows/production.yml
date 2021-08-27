@@ -33,13 +33,22 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     needs: [Test]
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: 🚢 Test Release
+        uses: cycjimmy/semantic-release-action@v2
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npm run semantic-release
+          semantic_version: 17
+          extra_plugins: |
+            @semantic-release/changelog@5.0.0
+            @semantic-release/git@9.0.0
+          branches: |
+            [
+              'main',
+              'master',
+              'next',
+              'next-major',
+              {name: 'beta', prerelease: true},
+              {name: 'alpha', prerelease: true}
+            ]
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
