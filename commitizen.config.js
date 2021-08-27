@@ -37,11 +37,9 @@ const types = [
 	},
 ];
 
-const scopes = ["admin", "automation", "cli", "core", "site", "bullshit"].map(
-	(name) => ({
-		name,
-	})
-);
+const scopes = ["admin", "automation", "cli", "core", "site"].map((name) => ({
+	name,
+}));
 
 module.exports = {
 	types,
