@@ -33,7 +33,7 @@ jobs:
         node-version: [16]
         os: [ubuntu-latest]
     steps:
-      - name: 🚢 Test Release
+      - name: 🚀 Release
         uses: cycjimmy/semantic-release-action@v2
         with:
           semantic_version: 17
