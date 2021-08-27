@@ -62,7 +62,7 @@ module.exports = {
 	},
 
 	allowCustomScopes: true,
-	allowBreakingChanges: ["feat", "fix"],
+	allowBreakingChanges: ["✨ feat", "🐞 fix"],
 	subjectLimit: 60,
 	skipQuestions: ["footer"],
 };
