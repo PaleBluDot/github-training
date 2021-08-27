@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.5.3](https://github.com/PaleBluDot/github-training/compare/v1.5.2...v1.5.3) (2021-08-27)
+
+
+### Bug Fixes
+
+* **core:** testing to see if gitmoji takes effect ([b438a80](https://github.com/PaleBluDot/github-training/commit/b438a803a2aaf956de2c50d9a82aec49eadbf13f))
+
 ## [1.5.2](https://github.com/PaleBluDot/github-training/compare/v1.5.1...v1.5.2) (2021-08-27)
 
 
