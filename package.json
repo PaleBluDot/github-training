@@ -29,7 +29,8 @@
 		"lint": "echo LINT: Has passed all test.",
 		"build": "echo BUILD: All files built without errors.",
 		"test": "echo TEST: All test passed!",
-		"semantic-release": "npx semantic-release --branches main"
+		"semantic-release": "npx semantic-release --branches main",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@commitlint/config-conventional": "^13.1.0",
