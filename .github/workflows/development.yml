@@ -12,7 +12,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  Quality:
+  QA:
     if: ${{ !contains(github.head_ref, 'all-contributors') }}
     runs-on: ${{ matrix.os }}
 
@@ -39,7 +39,7 @@ jobs:
         node-version: [16]
         os: [ubuntu-latest]
     steps:
-      - name: 🚢 Release
+      - name: 🚢 Test Release
         uses: cycjimmy/semantic-release-action@v2
         with:
           dry_run: true
