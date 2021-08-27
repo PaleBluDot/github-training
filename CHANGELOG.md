@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+
+
+## [1.5.1](https://github.com/PaleBluDot/github-training/compare/v1.5.0...v1.5.1) (2021-08-27)
+
+
+### Bug Fixes
+
+* **automation:** remove emoji from type ([2d9836e](https://github.com/PaleBluDot/github-training/commit/2d9836e2bbbc97a8be1f1680e80084c489089e37))
+
 # [1.5.0](https://github.com/PaleBluDot/github-training/compare/v1.4.3...v1.5.0) (2021-08-26)
 
 ### Features
