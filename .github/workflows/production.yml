@@ -6,7 +6,8 @@ on:
       - main
 
 jobs:
-  QA:
+  Test:
+    if: ${{ !contains(github.head_ref, 'all-contributors') }}
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -27,15 +28,16 @@ jobs:
 
   Release:
     runs-on: ${{ matrix.os }}
-    needs: [QA]
+    needs: [Test]
     strategy:
       matrix:
         node-version: [16]
         os: [ubuntu-latest]
     steps:
-      - name: 🚀 Release
+      - name: 🚢 Test Release
         uses: cycjimmy/semantic-release-action@v2
         with:
+          dry_run: true
           semantic_version: 17
           extra_plugins: |
             @semantic-release/changelog@5.0.1

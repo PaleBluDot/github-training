@@ -12,7 +12,7 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  QA:
+  Test:
     if: ${{ !contains(github.head_ref, 'all-contributors') }}
     runs-on: ${{ matrix.os }}
 
@@ -34,7 +34,7 @@ jobs:
 
   Release:
     runs-on: ${{ matrix.os }}
-    needs: [QA]
+    needs: [Test]
     strategy:
       matrix:
         node-version: [16]
