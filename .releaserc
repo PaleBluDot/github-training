@@ -2,18 +2,8 @@
 	"dryRun": false,
 	"branches": ["main"],
 	"plugins": [
-		[
-			"@semantic-release/commit-analyzer",
-			{
-				"config": "commitlint-config-gitmoji"
-			}
-		],
-		[
-			"@semantic-release/release-notes-generator",
-			{
-				"config": "commitlint-config-gitmoji"
-			}
-		],
+		"@semantic-release/commit-analyzer",
+		"@semantic-release/release-notes-generator",
 		[
 			"@semantic-release/changelog",
 			{
