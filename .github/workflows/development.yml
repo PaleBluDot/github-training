@@ -34,7 +34,7 @@ jobs:
 
   Release:
     runs-on: ${{ matrix.os }}
-    needs: [quality]
+    needs: [Quality]
     strategy:
       matrix:
         node-version: [16]
