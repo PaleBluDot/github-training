@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file. See
 
 
 
+# [1.6.0](https://github.com/PaleBluDot/github-training/compare/v1.5.3...v1.6.0) (2021-08-28)
+
+
+### Bug Fixes
+
+* **automation:** new scope ([31e7b6f](https://github.com/PaleBluDot/github-training/commit/31e7b6f197a5049bdc216b79a1aa2c22e5a1b73d))
+* **automation:** readd token ([b020327](https://github.com/PaleBluDot/github-training/commit/b02032761819868e1b6a0ffd0a2f41bcf52856dd)), closes [#50](https://github.com/PaleBluDot/github-training/issues/50)
+* **automation:** updated token ([3b31fdb](https://github.com/PaleBluDot/github-training/commit/3b31fdb6d86e6575382fd023b528caad2d7f8859))
+* **core:** add husky script ([72a9081](https://github.com/PaleBluDot/github-training/commit/72a9081ca46eeb13022d237bbf8e4975e37c9c5e))
+
+
+### Features
+
+* **automation:** new flow change to test on protected branches. ([0bc3ed8](https://github.com/PaleBluDot/github-training/commit/0bc3ed89ef66889c3a316aaf6e788385154c4085))
+* **automation:** new scope ([a255095](https://github.com/PaleBluDot/github-training/commit/a25509535080a67e23f1247c276c5b3baf73d21c))
+
 ## [1.5.3](https://github.com/PaleBluDot/github-training/compare/v1.5.2...v1.5.3) (2021-08-27)
 
 
