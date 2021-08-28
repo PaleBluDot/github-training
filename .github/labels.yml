@@ -1,44 +1,44 @@
 ---
 # Default GitHub labels
 - color: d23a4a
-  name: automation
+  name: 🔄️ automation
   description: Changes done to the .github folder
 - color: d73a4a
-  name: bug
+  name: 🐞 bug
   description: Functionality that does not work as intended/expected
 - color: 0075ca
-  name: documentation
+  name: 📝 documentation
   description: Update to the documentation.
 - color: cfd3d7
-  name: duplicate
+  name: ♊ duplicate
   description: This issue or pull request already exists
 - color: a2eeef
-  name: enhancement
+  name: ✨ enhancement
   description: Functionality that enhances existing features
 - color: f9d0c4
-  name: feature
+  name: 💡 feature
   description: Functionality that introduces a new feature
 - color: 7057ff
-  name: good first issue
+  name: 🐣 good first issue
   description: Good for newcomers
 - color: 008672
-  name: help wanted
+  name: 🆘 help wanted
   description: We are looking for community help
 - color: e4e669
-  name: invalid
+  name: ❌ invalid
   description: The issue is not a valid bug/feature request
 - color: d876e3
-  name: question
+  name: ❓ question
   description: The issue is not a valid bug/feature request
 - color: f86c8c
-  name: released
+  name: 🚀 released
   description: The issue is not a valid bug/feature request
 - color: e20bd4
-  name: semantic-release
+  name: 🛳️ semantic-release
   description: Error with semantic-release
 - color: d93f0b
-  name: test
+  name: 🚨 test
   description: For test errors
 - color: 000000
-  name: wontfix
+  name: ⛔ wontfix
   description: The issue is expected and will not be fixed
