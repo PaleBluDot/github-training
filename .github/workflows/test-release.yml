@@ -1,0 +1,56 @@
+name: Test Release
+
+on:
+  pull_request:
+    branches:
+      - "+([0-9])?(.{+([0-9]),x}).x"
+      - main
+      - master
+      - alpha
+      - beta
+      - next
+      - next-major
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test-release:
+    name: Test Release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [14]
+        os: [ubuntu-latest]
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v1
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+        env:
+          HUSKY_SKIP_INSTALL: true
+
+      - name: 🏗 Build
+        run: npm run build --if-present
+
+      - name: 🚢 Release
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npx semantic-release --branches --dry-run
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
