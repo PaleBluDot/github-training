@@ -1,0 +1,10 @@
+---
+# labels auto assigned to PR, keep in sync with labels.yml
+test:
+  - test/**
+documentation: -**.md
+  -**/**/*.md
+  - website/**/*
+automation:
+  - .github/*
+  - .github/**/*
