@@ -9,8 +9,7 @@ on:
       - .github/labels.yml
 
 jobs:
-  configure-labels:
-    name: Sync labels
+  sync-labels:
     runs-on: ubuntu-latest
 
     steps:
