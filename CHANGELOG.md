@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.7.1](https://github.com/PaleBluDot/github-training/compare/v1.7.0...v1.7.1) (2021-08-28)
+
+
+### Bug Fixes
+
+* **automation:** updated release notes ([1b6939e](https://github.com/PaleBluDot/github-training/commit/1b6939e9c787cb9309f3d3ab0a1974f4037cedf9))
+
 # [1.7.0](https://github.com/PaleBluDot/github-training/compare/v1.6.0...v1.7.0) (2021-08-28)
 
 

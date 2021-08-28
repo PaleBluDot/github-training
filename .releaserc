@@ -13,7 +13,7 @@
 		[
 			"@semantic-release/git",
 			{
-				"message": ":bookmark: chore(release): v${nextRelease.version} [ci]"
+				"message": "🏷️ chore(release): v${nextRelease.version} [ci]\n\n${nextRelease.notes}"
 			}
 		],
 		"@semantic-release/npm",
