@@ -4,20 +4,24 @@
 
 **GitHub** is a Git repository hosting service, but it adds many of its own features. While Git is a command line tool, GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features, such as a wikis and basic task management tools for every project.
 
-1. [Command Line](#command-line)
-	a. [Setting Up Repository](#setting-up-repository)
-    1. [Start](#start)
-    2. [Clone](#clone)
-    3. [Settings](#settings)
-	b. [Saving Changes](#saving-changes)
-    1. [Staging](#staging)
-    2. [Commit](#commit)
-	c. [Sync to Remote](#sync-to-remote)
-    1. [Remote](#remote)
-    2. [Fetch](#fetch)
-    3. [Pull](#pull)
-    4. [Push](#push)
-2. [Github GUI](#github-gui)
+1. [Working with Git and Github](#working-with-git-and-github)
+   1. [Command Line](#command-line)
+      1. [Setting Up Repository](#setting-up-repository)
+         1. [Start](#start)
+      2. [Clone](#clone)
+         1. [Config](#config)
+      3. [Saving Changes](#saving-changes)
+         1. [Status](#status)
+         2. [Commit](#commit)
+      4. [Sync to Remote](#sync-to-remote)
+         1. [Remote](#remote)
+         2. [Fetch](#fetch)
+         3. [Pull](#pull)
+         4. [Push](#push)
+   2. [Github Desktop](#github-desktop)
+      1. [Interface](#interface)
+      2. [Committing Changes](#committing-changes)
+      3. [Pushing Changes](#pushing-changes)
 
 ## Command Line
 
