@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+# [1.7.0](https://github.com/PaleBluDot/github-training/compare/v1.6.0...v1.7.0) (2021-08-28)
+
+
+### Features
+
+* **core:** documentation ToC update ([f006551](https://github.com/PaleBluDot/github-training/commit/f006551a2ed89d7c8715baee26321d0e01544034))
+
 # [1.6.0](https://github.com/PaleBluDot/github-training/compare/v1.5.3...v1.6.0) (2021-08-28)
 
 
