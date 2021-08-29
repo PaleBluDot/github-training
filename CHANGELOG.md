@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.7.3](https://github.com/PaleBluDot/github-training/compare/v1.7.2...v1.7.3) (2021-08-29)
+
+
+### Bug Fixes
+
+* **automation:** stop npm release ([#64](https://github.com/PaleBluDot/github-training/issues/64)) ([23aa374](https://github.com/PaleBluDot/github-training/commit/23aa3747e5525b6e0a771f7ad318ff2096a76861))
+
 ## [1.7.2](https://github.com/PaleBluDot/github-training/compare/v1.7.1...v1.7.2) (2021-08-29)
 
 
