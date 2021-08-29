@@ -16,7 +16,12 @@
 				"message": "🏷️ chore(release): v${nextRelease.version} [ci]\n\n${nextRelease.notes}"
 			}
 		],
-		"@semantic-release/npm",
+		[
+			"@semantic-release/npm",
+			{
+				"npmPublish": false
+			}
+		],
 		"@semantic-release/github"
 	]
 }

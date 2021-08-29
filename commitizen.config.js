@@ -46,6 +46,17 @@ const scopes = ["admin", "automation", "cli", "core", "site", "db"].map(
 module.exports = {
 	types,
 	scopes,
+	messages: {
+		type: "Type of change that you're committing:",
+		scope: "\nChoose the SCOPE of this change (optional):",
+		// used if allowCustomScopes is true
+		customScope: "Denote the SCOPE of this change:",
+		subject: "Write a SHORT, IMPERATIVE tense description of the change:\n",
+		body: "Provide a LONGER description of the change (optional):\n",
+		breaking: "List BREAKING CHANGES (optional):\n",
+		footer: "List CLOSED ISSUES (optional). E.g.: #31, #34:\n",
+		confirmCommit: "Are you sure you want to proceed with the commit above?",
+	},
 	allowCustomScopes: true,
 	allowBreakingChanges: ["feat", "fix"],
 	subjectLimit: 60,
