@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file. See
 
 
 
+## [1.7.2](https://github.com/PaleBluDot/github-training/compare/v1.7.1...v1.7.2) (2021-08-29)
+
+
+### Bug Fixes
+
+* **automation:** commitizen message ([#63](https://github.com/PaleBluDot/github-training/issues/63)) ([482ec6b](https://github.com/PaleBluDot/github-training/commit/482ec6b4469b95b1e469c63714cd555a1676e8cc))
+
+# Changelog
+
+All notable changes to this project will be documented in this file. See
+[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+
+
 ## [1.7.1](https://github.com/PaleBluDot/github-training/compare/v1.7.0...v1.7.1) (2021-08-28)
 
 
