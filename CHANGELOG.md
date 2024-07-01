@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.8.0](https://github.com/PaleBluDot/github-training/compare/v1.7.3...v1.8.0) (2024-07-01)
+
+
+### Features
+
+* update workflows ([e6be263](https://github.com/PaleBluDot/github-training/commit/e6be263abe86c4366b32f924eb8b0de0fa97191a))
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
