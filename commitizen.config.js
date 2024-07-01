@@ -48,8 +48,7 @@ module.exports = {
 	scopes,
 	messages: {
 		type: "Type of change that you're committing:",
-		scope: "\nChoose the SCOPE of this change (optional):",
-		// used if allowCustomScopes is true
+		scope: "\nChoose the SCOPE of this change:",
 		customScope: "Denote the SCOPE of this change:",
 		subject: "Write a SHORT, IMPERATIVE tense description of the change:\n",
 		body: "Provide a LONGER description of the change (optional):\n",
@@ -59,5 +58,6 @@ module.exports = {
 	},
 	allowCustomScopes: true,
 	allowBreakingChanges: ["feat", "fix"],
+	skipQuestions: ["breaking"],
 	subjectLimit: 60,
 };

@@ -12,51 +12,54 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  Test:
-    if: ${{ !contains(github.head_ref, 'all-contributors') }}
+  Test-Release:
+    name: 🚨 Test Release 🚨
     runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
-        node-version: [16]
+        node: [18]
         os: [ubuntu-latest]
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
         with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm tes
+          fetch-depth: 0
+          persist-credentials: false
 
-  Release:
-    runs-on: ${{ matrix.os }}
-    needs: [Test]
-    strategy:
-      matrix:
-        node-version: [16]
-        os: [ubuntu-latest]
-    steps:
-      - name: 🚢 Test Release
-        uses: cycjimmy/semantic-release-action@v2
+      - name: ⎔ Setup node ${{ matrix.node }}
+        uses: actions/setup-node@v3
         with:
+          node-version: ${{ matrix.node }}
+
+      - name: 📥 Install deps
+        run: npm ci
+
+      - name: 🏗 Build
+        run: npm run build --if-present
+
+      - name: 🧩 Format
+        run: npm run format --if-present
+
+      - name: 🚨 Test
+        run: npm run test:ci --if-present
+
+      - name: 🚀 Release Dry Run
+        uses: cycjimmy/semantic-release-action@v3
+        id: semantic
+        with:
+          semantic_version: 18
           dry_run: true
-          semantic_version: 17
-          extra_plugins: |
-            @semantic-release/changelog@5.0.0
-            @semantic-release/git@9.0.0
+          ci: false
           branches: |
             [
               'main',
-              'master',
               'next',
               'next-major',
               {name: 'beta', prerelease: true},
               {name: 'alpha', prerelease: true}
             ]
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

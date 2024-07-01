@@ -1,16 +1,26 @@
 {
-	"branches": ["main", "beta", "alpha"],
+	"branches": ["main", "alpha", "beta", "next", "next-major"],
 	"plugins": [
 		"@semantic-release/commit-analyzer",
 		"@semantic-release/release-notes-generator",
-		"@semantic-release/changelog",
+		[
+			"@semantic-release/changelog",
+			{
+				"changelogTitle": "# Changelog"
+			}
+		],
 		"@semantic-release/npm",
-		"@semantic-release/github",
+		[
+			"@semantic-release/github",
+			{
+				"assets": [{ "path": "dist/templates/base/*" }, { "path": "dist/templates/newsletters/*" }, { "path": "dist/data/*" }]
+			}
+		],
 		[
 			"@semantic-release/git",
 			{
 				"assets": ["package.json", "package-lock.json", "CHANGELOG.md"],
-				"message": "chore(release): 🏷️ v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+				"message": "chore(release): v${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
 			}
 		]
 	]
