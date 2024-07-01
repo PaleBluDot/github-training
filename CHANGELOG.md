@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.9.0](https://github.com/PaleBluDot/github-training/compare/v1.8.0...v1.9.0) (2024-07-01)
+
+
+### Features
+
+* update packages ([a4b13d7](https://github.com/PaleBluDot/github-training/commit/a4b13d7e65f199d8930ea92b082df85c7dc5ea61))
+
 # [1.8.0](https://github.com/PaleBluDot/github-training/compare/v1.7.3...v1.8.0) (2024-07-01)
 
 
